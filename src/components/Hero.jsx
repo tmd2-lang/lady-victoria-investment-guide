@@ -1,0 +1,73 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ArrowDown } from 'lucide-react';
+
+export default function Hero() {
+    const heroRef = useRef(null);
+
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.from('.hero-anim', {
+                y: 40,
+                opacity: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: 'power3.out',
+                delay: 0.1
+            });
+
+            gsap.to('.hero-arrow', {
+                y: 10,
+                yoyo: true,
+                repeat: -1,
+                duration: 2,
+                ease: 'power1.inOut'
+            });
+        }, heroRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    return (
+        <section
+            ref={heroRef}
+            className="relative w-full h-[100dvh] flex items-end pb-24 px-8 md:px-20 overflow-hidden"
+        >
+            {/* Background Image & Overlay */}
+            <div className="absolute inset-0 z-0 select-none">
+                <img
+                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2670&auto=format&fit=crop"
+                    alt="Luxury wedding florals and romantic candlelight"
+                    className="w-full h-full object-cover scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1512] via-[#1A1512]/60 to-transparent"></div>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 w-full max-w-3xl flex flex-col items-start gap-4">
+                <div className="hero-anim text-accent font-sans text-sm md:text-md tracking-[0.2em] uppercase">
+                    Lady Victoria Designs
+                </div>
+
+                <h1 className="hero-anim flex flex-col leading-[0.9] text-textDark">
+                    <span className="font-serif font-bold text-6xl md:text-8xl">Investment</span>
+                    <span className="font-serif italic text-8xl md:text-[12rem] -mt-2 md:-mt-6 ml-0 md:ml-12">Guide</span>
+                </h1>
+
+                <div className="hero-anim mt-4 md:mt-8 flex flex-col gap-2">
+                    <p className="text-textDark font-sans text-lg md:text-2xl font-light">
+                        Full-Service Floral & Event Design
+                    </p>
+                    <p className="text-mutedText font-sans tracking-widest text-xs md:text-sm uppercase">
+                        Pennsylvania & Beyond
+                    </p>
+                </div>
+            </div>
+
+            {/* Scroll indicator */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 opacity-70">
+                <ArrowDown className="hero-arrow text-textDark w-6 h-6 stroke-1" />
+            </div>
+        </section>
+    );
+}
