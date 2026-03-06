@@ -59,10 +59,10 @@ export default function Manifesto() {
                 {/* Left Panel (30%) */}
                 <div className="w-full md:w-1/3 flex flex-col gap-4 sticky top-32 h-fit">
                     <div className="manifesto-text text-accent font-sans text-xs tracking-[0.2em] uppercase">
-                        Why
+                        Our Philosophy
                     </div>
                     <h2 className="manifesto-text font-serif text-4xl md:text-5xl">
-                        Lady Victoria
+                        Design with Intention
                     </h2>
                 </div>
 

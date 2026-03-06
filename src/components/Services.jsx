@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
     {
         title: "Custom Floral Design",
-        desc: "Bridal bouquet & personal flowers, ceremony florals, reception centerpieces, sweetheart table design, stationaries and cocktail area florals",
+        desc: "Bridal bouquet & personal flowers, ceremony florals, reception centerpieces, sweetheart table design, stationery and cocktail area florals",
         num: "01"
     },
     {

@@ -25,7 +25,7 @@ const tiers = [
             { bold: 'Reception Centerpieces', text: 'Mix of low arrangements, bud vases, and optional tall pieces + candle styling (votives or tapers)' },
             { bold: 'Sweetheart Area', text: 'Floral accent + coordinated linen or table styling' },
             { bold: 'Select Rental Pieces', text: 'Sweetheart chairs, accent furniture, minimal tabletop décor' },
-            { bold: 'Setup + On-Site Oversight', text: 'Team handles setup, Irene ensures every detail is executed beautifully' }
+            { bold: 'Setup + On-Site Oversight', text: 'Our design team handles setup and ensures every detail is executed beautifully' }
         ],
         isSignature: false,
         image: '/Package1.jpg',

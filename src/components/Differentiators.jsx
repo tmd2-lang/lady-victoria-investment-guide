@@ -57,7 +57,7 @@ export default function Differentiators() {
                         <div className="absolute top-4 right-8 font-serif text-[6rem] font-bold text-white/5 pointer-events-none group-hover:text-accent/10 transition-colors">03</div>
                         <h3 className="relative z-10 font-serif text-2xl mb-6 text-accent">Personal Attention</h3>
                         <p className="relative z-10 font-sans text-lg font-light leading-relaxed text-white/70">
-                            "You're not just a client — you're a collaboration. Irene personally oversees every design and is on-site for every wedding."
+                            "You're not just a client — you're a collaboration. Irene ensures your vision is executed perfectly."
                         </p>
                     </div>
 
