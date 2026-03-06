@@ -16,7 +16,7 @@ export default function PhotoBreak({ image, alt }) {
                     end: 'bottom top',
                     scrub: true,
                 },
-                yPercent: 20,
+                yPercent: 30,
                 ease: 'none'
             });
         });
@@ -25,12 +25,12 @@ export default function PhotoBreak({ image, alt }) {
     }, []);
 
     return (
-        <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden bg-primaryDark">
+        <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-primaryDark">
             <img
                 ref={imgRef}
                 src={image}
                 alt={alt}
-                className="absolute -top-[20%] left-0 w-full h-[140%] object-cover opacity-80"
+                className="absolute -top-[30%] left-0 w-full h-[160%] object-cover opacity-80"
             />
         </section>
     );

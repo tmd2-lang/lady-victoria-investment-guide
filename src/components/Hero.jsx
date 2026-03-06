@@ -36,9 +36,9 @@ export default function Hero() {
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0 select-none">
                 <img
-                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2670&auto=format&fit=crop"
+                    src="/hero-image.jpg"
                     alt="Luxury wedding florals and romantic candlelight"
-                    className="w-full h-full object-cover scale-105"
+                    className="w-full h-full object-cover scale-105 object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1512] via-[#1A1512]/60 to-transparent"></div>
             </div>
@@ -56,10 +56,10 @@ export default function Hero() {
 
                 <div className="hero-anim mt-4 md:mt-8 flex flex-col gap-2">
                     <p className="text-textDark font-sans text-lg md:text-2xl font-light">
-                        Full-Service Floral & Event Design
+                        Full service floral | Rentals | Production aesthetics
                     </p>
                     <p className="text-mutedText font-sans tracking-widest text-xs md:text-sm uppercase">
-                        Pennsylvania & Beyond
+                        DC Metro Area, DE, NJ & PA
                     </p>
                 </div>
             </div>

@@ -38,26 +38,29 @@ export default function Process() {
         let ctx = gsap.context(() => {
             const cards = gsap.utils.toArray('.process-card');
 
-            // We will pin each card sequentially and animate previous ones
-            cards.forEach((card, i) => {
-                if (i < cards.length - 1) {
-                    ScrollTrigger.create({
-                        trigger: card,
-                        start: 'top top',
-                        pin: true,
-                        pinSpacing: false,
-                        end: () => `+=${window.innerHeight}`,
-                        onUpdate: (self) => {
-                            gsap.to(card, {
-                                scale: 1 - (self.progress * 0.08),
-                                filter: `blur(${self.progress * 8}px)`,
-                                opacity: 1 - (self.progress * 0.6),
-                                ease: 'none',
-                                duration: 0.1
-                            });
-                        }
-                    });
-                }
+            // Set up a single scroll trigger for the whole section instead of individual pins
+            // to make the scroll seamless
+            ScrollTrigger.create({
+                trigger: containerRef.current,
+                start: 'top top',
+                end: () => `+=${window.innerHeight * cards.length}`,
+                pin: true,
+                scrub: 1, // Smooth scrubbing
+                animation: gsap.timeline()
+                    // Animate each card (except the last) fading and scaling down as the next comes up
+                    .to(cards.slice(0, -1), {
+                        scale: 0.9,
+                        opacity: 0.1,
+                        filter: 'blur(10px)',
+                        stagger: 0.5,
+                        ease: 'none'
+                    }, 0)
+                    // At the same time, animate the next cards coming up to stack
+                    .from(cards.slice(1), {
+                        y: () => window.innerHeight,
+                        stagger: 0.5,
+                        ease: 'none'
+                    }, 0)
             });
 
         }, containerRef);
@@ -65,8 +68,8 @@ export default function Process() {
         return () => ctx.revert();
     }, []);
 
-    const renderAnimation = (type) => {
-        switch (type) {
+    const renderAnimation = (step) => {
+        switch (step.animationType) {
             case 'circles':
                 return (
                     <svg viewBox="0 0 100 100" className="w-32 h-32 md:w-48 md:h-48 opacity-20 animate-[spin_20s_linear_infinite]">
@@ -101,19 +104,27 @@ export default function Process() {
                         <polygon points="50,90 90,10 10,10" fill="none" stroke="currentColor" strokeWidth="0.5" />
                     </svg>
                 );
+            case 'image':
+                return (
+                    <img
+                        src={step.imgSrc}
+                        alt={step.title}
+                        className="w-full h-full object-cover rounded-xl"
+                    />
+                );
             default: return null;
         }
     };
 
     return (
-        <section ref={containerRef} className="relative w-full bg-background pb-20">
-            <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center">
+        <section ref={containerRef} className="relative w-full bg-background h-screen overflow-hidden">
+            <div className="relative w-full h-full max-w-6xl mx-auto flex flex-col items-center justify-center">
 
                 {processSteps.map((step, idx) => (
                     <div
                         key={idx}
-                        className="process-card w-full min-h-[60vh] md:min-h-[70vh] flex items-center justify-center p-6 md:p-12 sticky top-[15vh] md:top-[15vh]"
-                        style={{ zIndex: idx }}
+                        className="process-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center p-6 md:p-12"
+                        style={{ zIndex: idx + 10 }}
                     >
                         <div className="w-full h-auto min-h-[50vh] bg-white border border-subtleBorder rounded-[2rem] p-8 md:p-16 flex flex-col md:flex-row shadow-xl items-center md:justify-between transform-gpu">
                             <div className="w-full md:w-1/2 flex flex-col gap-6 md:gap-10 h-full justify-center">
@@ -124,8 +135,8 @@ export default function Process() {
                                 </p>
                             </div>
 
-                            <div className="w-full md:w-1/2 h-48 md:h-auto flex items-center justify-center text-primaryDark mt-8 md:mt-0">
-                                {renderAnimation(step.animationType)}
+                            <div className="w-full md:w-1/2 h-48 md:h-64 flex items-center justify-center text-primaryDark mt-8 md:mt-0">
+                                {renderAnimation(step)}
                             </div>
                         </div>
                     </div>

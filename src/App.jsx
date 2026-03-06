@@ -11,6 +11,7 @@ import Differentiators from './components/Differentiators';
 import InvestmentQuiz from './components/InvestmentQuiz';
 import LeadCapture from './components/LeadCapture';
 import WhatHappensNext from './components/WhatHappensNext';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 function App() {
@@ -32,8 +33,8 @@ function App() {
         <Process />
 
         <PhotoBreak
-          image="https://images.unsplash.com/photo-1558535284-39fe3f893047?q=80&w=2670&auto=format&fit=crop"
-          alt="Luxury wedding floral centerpiece closeup soft light"
+          image="/underexecution.jpg"
+          alt="Execution and production setup aesthetic"
         />
 
         <div id="investment" className="w-full h-[40vh] bg-primaryDark flex flex-col items-center justify-center text-center px-6">
@@ -44,15 +45,16 @@ function App() {
 
         <InvestmentTiers />
         <Differentiators />
+        <Testimonials />
 
         <PhotoBreak
-          image="https://images.unsplash.com/photo-1571332760709-8943098311f1?q=80&w=2670&auto=format&fit=crop"
-          alt="Wedding ceremony aisle floral arch elegant"
+          image="/pink.jpg"
+          alt="Pink floral wedding aesthetic"
         />
 
         <InvestmentQuiz />
-        <LeadCapture />
         <WhatHappensNext />
+        <LeadCapture />
       </main>
 
       <Footer />

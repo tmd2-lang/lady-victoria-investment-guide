@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="max-w-4xl w-full flex flex-col items-center gap-8">
 
                 <h2 className="font-serif text-4xl md:text-5xl tracking-wide">Lady Victoria Designs</h2>
-                <p className="font-sans text-sm tracking-[0.2em] uppercase text-white/50">Full-Service Floral & Event Design</p>
+                <p className="font-sans text-sm tracking-[0.2em] uppercase text-white/50">Full service floral | Rentals | Production aesthetics</p>
 
                 <div className="w-24 h-[1px] bg-accent mt-4 mb-4"></div>
 
@@ -23,7 +23,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-12 flex flex-col gap-4 font-sans text-xs text-white/40 italic">
-                    <p>Serving Pennsylvania & Beyond</p>
+                    <p>Serving DC Metro Area, DE, NJ & PA</p>
                     <p>© {new Date().getFullYear()} Lady Victoria Designs. All rights reserved.</p>
                 </div>
 

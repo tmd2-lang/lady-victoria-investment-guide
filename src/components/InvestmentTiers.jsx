@@ -28,7 +28,7 @@ const tiers = [
             { bold: 'Setup + On-Site Oversight', text: 'Team handles setup, Irene ensures every detail is executed beautifully' }
         ],
         isSignature: false,
-        image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2670&auto=format&fit=crop',
+        image: '/Package1.jpg',
         alt: 'Minimal bridal bouquet natural light soft elegant'
     },
     {
@@ -54,7 +54,7 @@ const tiers = [
             { bold: 'Full Setup + Management', text: 'Delivery, installation, and on-site coordination from start to finish' }
         ],
         isSignature: false,
-        image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2670&auto=format&fit=crop',
+        image: '/Sophia.jpg.jpeg',
         alt: 'Lush wedding centerpiece candles romantic lighting'
     },
     {
@@ -77,7 +77,7 @@ const tiers = [
             { bold: 'Bespoke Ceremony Design', text: 'Entrance statement, aisle meadows, floral arch + candle styling' },
             { bold: 'Reception Installations', text: 'Hanging florals, chandeliers, luxe centerpieces + custom sweetheart canopy' },
             { bold: 'Full Production + Design Execution', text: 'Custom lighting, drapery, stage wraps, dance floor design + premium rentals: lounges, bar fronts, signage' },
-            { bold: 'Comprehensive On-Site Management', text: 'Irene and the production team manage every detail from setup to breakdown' }
+            { bold: 'Comprehensive On-Site Management', text: 'Our lead designers and the production team manage every detail from setup to breakdown' }
         ],
         isSignature: true,
         image: null,

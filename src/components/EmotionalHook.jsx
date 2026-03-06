@@ -21,8 +21,8 @@ export default function EmotionalHook() {
                 },
                 y: 20,
                 opacity: 0,
-                duration: 1,
-                stagger: 0.1,
+                duration: 0.6,
+                stagger: 0.03,
                 ease: 'power3.out'
             });
 

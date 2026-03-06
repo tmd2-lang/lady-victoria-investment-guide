@@ -8,7 +8,7 @@ export default function LeadCapture() {
     };
 
     return (
-        <section id="contact" className="w-full bg-background pb-32 px-6">
+        <section id="contact" className="w-full bg-background pt-32 lg:pt-40 pb-32 px-6">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="font-serif text-4xl md:text-5xl text-textLight mb-4">Ready to Take the Next Step?</h2>

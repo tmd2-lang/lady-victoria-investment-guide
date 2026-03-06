@@ -4,24 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const quotes = [
-    {
-        text: "Irene took our Pinterest dreams and turned them into something even more beautiful than we imagined. Every single guest commented on the flowers.",
-        author: "Emily & James",
-        venue: "Phoenixville Estate"
-    },
-    {
-        text: "Working with Lady Victoria was the best decision we made. The design process was seamless, and on our wedding day, everything was absolutely perfect.",
-        author: "Sarah & Michael",
-        venue: "Hotel DuPont"
-    },
-    {
-        text: "She brought my vision of my dream wedding to reality. I couldn't have asked for anything more perfect.",
-        author: "Dana",
-        venue: "Private Estate"
-    }
-];
-
+// Quotes moved to Testimonials component
 export default function Differentiators() {
     const sectionRef = useRef(null);
 
@@ -38,19 +21,7 @@ export default function Differentiators() {
                 stagger: 0.2,
                 ease: 'power3.out'
             });
-
-            gsap.from('.testimonial-card', {
-                scrollTrigger: {
-                    trigger: '.test-grid',
-                    start: 'top 80%',
-                },
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.15,
-                ease: 'power3.out'
-            });
-        }, sectionRef);
+        });
         return () => ctx.revert();
     }, []);
 
@@ -90,24 +61,6 @@ export default function Differentiators() {
                         </p>
                     </div>
 
-                </div>
-            </div>
-
-            {/* Testimonials */}
-            <div className="max-w-7xl mx-auto flex flex-col gap-12">
-                <div className="w-16 h-[1px] bg-accent/40 mx-auto mb-8"></div>
-                <div className="test-grid grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {quotes.map((quote, idx) => (
-                        <div key={idx} className="testimonial-card flex flex-col gap-6 text-center px-4">
-                            <p className="font-serif italic text-xl md:text-2xl leading-relaxed text-white/90">
-                                "{quote.text}"
-                            </p>
-                            <div className="mt-auto pt-6">
-                                <p className="font-sans font-bold text-accent tracking-wide uppercase text-sm mb-1">{quote.author}</p>
-                                <p className="font-sans text-xs text-white/40 tracking-widest uppercase">{quote.venue}</p>
-                            </div>
-                        </div>
-                    ))}
                 </div>
             </div>
 
