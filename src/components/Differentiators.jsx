@@ -45,7 +45,7 @@ export default function Differentiators() {
                         </p>
                     </div>
 
-                    <div className="diff-card relative p-8 bg-primaryDark/50 rounded-[2rem] border border-white/5 hover:bg-primaryDark transition-colors group mt-0 md:mt-12">
+                    <div className="diff-card relative p-8 bg-primaryDark/50 rounded-[2rem] border border-white/5 hover:bg-primaryDark transition-colors group lg:mt-12">
                         <div className="absolute top-4 right-8 font-serif text-[6rem] font-bold text-white/5 pointer-events-none group-hover:text-accent/10 transition-colors">02</div>
                         <h3 className="relative z-10 font-serif text-2xl mb-6 text-accent">Stress-Free Execution</h3>
                         <p className="relative z-10 font-sans text-lg font-light leading-relaxed text-white/70">
@@ -53,7 +53,7 @@ export default function Differentiators() {
                         </p>
                     </div>
 
-                    <div className="diff-card relative p-8 bg-primaryDark/50 rounded-[2rem] border border-white/5 hover:bg-primaryDark transition-colors group mt-0 md:mt-24">
+                    <div className="diff-card relative p-8 bg-primaryDark/50 rounded-[2rem] border border-white/5 hover:bg-primaryDark transition-colors group lg:mt-24">
                         <div className="absolute top-4 right-8 font-serif text-[6rem] font-bold text-white/5 pointer-events-none group-hover:text-accent/10 transition-colors">03</div>
                         <h3 className="relative z-10 font-serif text-2xl mb-6 text-accent">Personal Attention</h3>
                         <p className="relative z-10 font-sans text-lg font-light leading-relaxed text-white/70">

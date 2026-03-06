@@ -62,7 +62,10 @@ export default function Navigation() {
                 <a href="#quiz" className="hover:-translate-y-[1px] transition-transform">Quiz</a>
             </div>
 
-            <button className="relative overflow-hidden group bg-accent text-textDark px-6 py-2 rounded-full font-sans text-sm tracking-widest uppercase hover:scale-[1.03] transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+            <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="relative overflow-hidden group bg-accent text-textDark px-6 py-2 rounded-full font-sans text-sm tracking-widest uppercase hover:scale-[1.03] transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+            >
                 <span className="relative z-10">Inquire</span>
                 <div className="absolute inset-0 bg-accentHover translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] z-0" />
             </button>
