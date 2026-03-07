@@ -57,7 +57,7 @@ export default function Manifesto() {
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
 
                 {/* Left Panel (30%) */}
-                <div className="w-full md:w-1/3 flex flex-col gap-4 sticky top-32 h-fit">
+                <div className="w-full md:w-1/3 flex flex-col gap-4 md:sticky md:top-32 h-fit">
                     <div className="manifesto-text text-accent font-sans text-xs tracking-[0.2em] uppercase">
                         Our Philosophy
                     </div>
