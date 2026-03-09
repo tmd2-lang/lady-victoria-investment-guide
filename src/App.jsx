@@ -8,7 +8,6 @@ import Process from './components/Process';
 import PhotoBreak from './components/PhotoBreak';
 import InvestmentTiers from './components/InvestmentTiers';
 import Differentiators from './components/Differentiators';
-import InvestmentQuiz from './components/InvestmentQuiz';
 import LeadCapture from './components/LeadCapture';
 import WhatHappensNext from './components/WhatHappensNext';
 import Testimonials from './components/Testimonials';
@@ -52,7 +51,6 @@ function App() {
           alt="Pink floral wedding aesthetic"
         />
 
-        <InvestmentQuiz />
         <WhatHappensNext />
         <LeadCapture />
       </main>
