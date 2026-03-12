@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function Navigation() {
+export default function Navigation({ onOpenQuiz }) {
     const navRef = useRef(null);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
@@ -59,7 +59,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center gap-8 font-sans text-sm tracking-widest uppercase">
                 <a href="#services" className="hover:-translate-y-[1px] transition-transform">Services</a>
                 <a href="#investment" className="hover:-translate-y-[1px] transition-transform">Investment</a>
-                <a href="#quiz" className="hover:-translate-y-[1px] transition-transform">Quiz</a>
+                <button onClick={onOpenQuiz} className="hover:-translate-y-[1px] transition-transform">Quiz</button>
             </div>
 
             <button

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import EmotionalHook from './components/EmotionalHook';
@@ -12,13 +12,19 @@ import LeadCapture from './components/LeadCapture';
 import WhatHappensNext from './components/WhatHappensNext';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import StandaloneQuiz from './components/StandaloneQuiz';
 
 function App() {
+  const [showQuiz, setShowQuiz] = useState(false);
   return (
     <div className="relative w-full min-h-screen bg-background text-textLight">
-      <Navigation />
+      {showQuiz ? (
+        <StandaloneQuiz onBack={() => setShowQuiz(false)} />
+      ) : (
+        <>
+          <Navigation onOpenQuiz={() => setShowQuiz(true)} />
 
-      <main>
+          <main>
         <Hero />
         <EmotionalHook />
 
@@ -52,10 +58,12 @@ function App() {
         />
 
         <WhatHappensNext />
-        <LeadCapture />
-      </main>
+          <LeadCapture />
+        </main>
 
-      <Footer />
+        <Footer />
+        </>
+      )}
     </div>
   );
 }
