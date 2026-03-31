@@ -93,11 +93,12 @@ export default function LeadCapture() {
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <label htmlFor="phone" className="font-sans text-xs uppercase tracking-widest text-textLight">Phone Number</label>
+                                    <label htmlFor="phone" className="font-sans text-xs uppercase tracking-widest text-textLight">Phone Number *</label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         name="phone"
+                                        required
                                         className="border-b border-subtleBorder py-2 bg-transparent focus:outline-none focus:border-accent transition-colors font-sans text-textLight"
                                     />
                                 </div>
