@@ -71,7 +71,7 @@ export default function LeadCapture() {
                                 </div>
                             )}
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div className="flex flex-col gap-2">
                                     <label htmlFor="name" className="font-sans text-xs uppercase tracking-widest text-textLight">Name *</label>
                                     <input
@@ -89,6 +89,15 @@ export default function LeadCapture() {
                                         id="email"
                                         name="email"
                                         required
+                                        className="border-b border-subtleBorder py-2 bg-transparent focus:outline-none focus:border-accent transition-colors font-sans text-textLight"
+                                    />
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <label htmlFor="phone" className="font-sans text-xs uppercase tracking-widest text-textLight">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
                                         className="border-b border-subtleBorder py-2 bg-transparent focus:outline-none focus:border-accent transition-colors font-sans text-textLight"
                                     />
                                 </div>

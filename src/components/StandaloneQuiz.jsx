@@ -406,6 +406,16 @@ export default function StandaloneQuiz({ onBack }) {
                                     </div>
                                     
                                     <div className="flex flex-col gap-2">
+                                        <label htmlFor="phone" className="font-sans text-xs uppercase tracking-widest text-textLight ml-2">Phone Number</label>
+                                        <input 
+                                            type="tel" 
+                                            id="phone" 
+                                            className="w-full bg-white border border-subtleBorder text-textLight px-6 py-4 rounded-2xl focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all font-sans"
+                                            placeholder="(555) 123-4567"
+                                        />
+                                    </div>
+                                    
+                                    <div className="flex flex-col gap-2">
                                         <label htmlFor="date" className="font-sans text-xs uppercase tracking-widest text-textLight ml-2">Wedding Date (Optional)</label>
                                         <input 
                                             type="text" 
