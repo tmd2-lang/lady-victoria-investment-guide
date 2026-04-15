@@ -135,6 +135,21 @@ export default function LeadCapture() {
                             </div>
 
                             <div className="flex flex-col gap-2">
+                                <label htmlFor="tier" className="font-sans text-xs uppercase tracking-widest text-textLight">Expected Investment Tier</label>
+                                <select
+                                    id="tier"
+                                    name="tier"
+                                    defaultValue=""
+                                    className="border-b border-subtleBorder py-2 bg-transparent focus:outline-none focus:border-accent transition-colors font-sans text-textLight appearance-none"
+                                >
+                                    <option value="" disabled>Select an option</option>
+                                    <option value="Tier Three">Tier Three - The Essentials ($8k - $15k)</option>
+                                    <option value="Tier Two">Tier Two - Design + Custom Florals ($20k - $30k)</option>
+                                    <option value="Tier One">Tier One - Full Production (Starting at $55k)</option>
+                                </select>
+                            </div>
+
+                            <div className="flex flex-col gap-2">
                                 <label htmlFor="vision" className="font-sans text-xs uppercase tracking-widest text-textLight">Tell us about your vision</label>
                                 <textarea
                                     id="vision"
